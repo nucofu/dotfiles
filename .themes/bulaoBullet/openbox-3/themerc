@@ -1,0 +1,99 @@
+# Menu
+
+menu.border.width: 2
+menu.border.height: 4
+menu.separator.width: 2
+menu.separator.padding.width: 0
+menu.separator.padding.height: 2
+menu.separator.color: #19abff
+
+menu.title.bg:  flat  solid
+menu.title.bg.color: #19abff
+menu.title.text.color: #ffffff
+
+menu.items.bg:  flat  solid
+menu.items.bg.color: #1e1e2e
+menu.items.text.color: #f0f0f0
+
+menu.items.active.bg:  flat  solid
+menu.items.active.bg.color: #19abff
+menu.items.active.text.color: #ffffff
+
+menu.items.disabled.text.color: #bababa
+menu.items.active.disabled.text.color: #bababa
+
+# Windows
+
+border.width: 1
+padding.width: 4
+padding.height: 4
+window.handle.width: 1
+window.client.padding.width: 0
+window.client.padding.height: 0
+
+*.active.border.color: #282828
+*.inactive.border.color: #282828
+
+window.*.title.bg:  flat  solid
+window.*.handle.bg:  flat  solid
+window.*.grip.bg: parentrelative
+
+window.*.label.bg: parentrelative
+window.*.button.*.bg: parentrelative
+window.*.text.justify: right
+
+window.active.title.bg.color: #1e1e2e
+window.active.label.text.color: #ffffff
+
+# Buttons
+
+window.active.button.close.unpressed.image.color: #de1009
+window.active.button.max.unpressed.image.color: #10de09
+window.active.button.iconify.unpressed.image.color: #ffe74f
+window.active.button.desk.unpressed.image.color: #19abff
+window.active.button.shade.unpressed.image.color: #19abff
+window.active.button.toggled.unpressed.image.color: #19abff
+
+window.active.button.*.disabled.image.color: #7f849c
+window.active.button.*.hover.image.color: #199aff
+window.active.button.*.pressed.image.color: #19bcff
+
+window.active.handle.bg.color:  #282828
+window.inactive.handle.bg.color: #383838
+
+window.inactive.title.bg.color: #383838
+window.inactive.label.text.color: #898989
+window.inactive.button.*.unpressed.image.color: #898989
+window.inactive.button.*.disabled.image.color: #6e6e6e
+window.inactive.button.*.hover.image.color: #dadada
+window.inactive.button.*.pressed.image.color: #1c1c1c
+
+# OSD
+
+osd.bg:  flat  solid
+osd.bg.color: #1e1e2e
+
+osd.hilight.bg:  flat  solid
+osd.hilight.bg.color: #19abff
+
+osd.unhilight.bg:  flat  solid
+osd.unhilight.bg.color: #383838
+
+osd.label.text.color: #f0f0f0
+
+
+# Color information
+
+# primary-bright: #19bcff
+# primary-normal: #19abff
+# primary-low: #199aff
+
+# background: #1e1e2e
+# border: #282828
+
+# red: #de1009
+# green: #10de09
+# yellow: #ffe74f
+
+# text-bright: #ffffff
+# text-low: #f0f0f0

@@ -1,0 +1,20 @@
+# run compositor
+picom -b &
+
+# set wallpaper
+nitrogen --restore &
+
+# set lemonbar
+#/home/tutu/.config/selfScript/statusBar.sh &
+
+# set conky
+conky -c ~/.config/conky/default.conkyrc --pause=1 &
+
+# set color temperature
+#sct 3333 &
+
+# set audio
+#pipewire &
+
+# set automount
+#udiskie &
