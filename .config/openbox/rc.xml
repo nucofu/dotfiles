@@ -407,6 +407,11 @@
         <command>notify-send "skrinshut berhasil ditangkap"</command>
       </action>
     </keybind>
+    <keybind key="W-Print">
+      <action name="Execute">
+        <command>bash -c "$HOME/.config/selfScript/pickColor.sh"</command>
+      </action>
+    </keybind>
     <!-- windows manipulation -->
     <keybind key="C-W-i">
       <action name="Iconify"/>

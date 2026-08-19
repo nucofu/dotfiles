@@ -8,13 +8,20 @@ current
 - openbox
 - picom
 - sakura
+- dunst
+- obmenu-generator
+- lemonbar
 
 extra
 - themes
+- icons
 
 next
-- obmenu-generator
-- dunst
-- lemonbar
 - qt5ct, qt6ct
-- icons
+- conky **update**
+- dunst **update**
+- battery management
+- screen mirror
+
+catetan
+*kahade adjust path ka desktop dina obmenu-generator lamun ek ganti user

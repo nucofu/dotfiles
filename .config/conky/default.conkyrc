@@ -23,22 +23,25 @@ conky.config = {
 
     own_window = true,
     own_window_class = 'Conky',
-    own_window_transparent = true,
+    own_window_transparent = false,
+    own_window_argb_visual = true,
+    own_window_argb_value = 153,
+    own_window_colour = '1e1e2e',
     own_window_type = 'override',
     own_window_hints = 'undecorated,sticky,below,skip_taskbar,skip_pager',
 
     minimum_height = 200,
     minimum_width = 200,
     maximum_width == 400,
-    gap_x = 20,
-    gap_y = 15,
+    gap_x = 25,
+    gap_y = 25,
     
     alignment = 'top_left',
     update_interval = 1.0,
 
 -- === Font Section ===
 
-    font = 'Iosevka Nerd Font:style=bold:size=10.5',
+    font = 'Iosevka Nerd Font:style=bold:size=10',
 
     use_xft = true,
     uppercase = false,
@@ -46,25 +49,28 @@ conky.config = {
 
 -- === Color Section ===
 
-    default_color = 'white',
-    color0 = "#ffffff",
-    color2 = "#ffe74f",
-    color1 = "#fabc00",
+    default_color = '#282828',
+    color0 = 'white',
+    color1 = "#199aff",
+    color2 = "#19bcff",
 
 -- === Outline & Shades ===
 
     draw_outline = false,
     default_outline_color = 'black',
 
-    draw_shades = true,
+    draw_shades = false,
     default_shade_color = '#383838',
 
 -- === Borders ===
 
-    draw_borders = false,
-    border_width = 1,
+    draw_borders = true,
+    default_borders_color = '#282828',
+    border_width = 2,
     draw_graph_borders = true,
     stippled_borders = 0,
+    border_outer_margin = 0,
+    border_inner_margin = 8,
 
 -- === Buffers ===
 
@@ -82,14 +88,15 @@ conky.config = {
 
 conky.text = [[
 ${color1}Info:$color0 Void $kernel ($nodename) ($machine)
-$hr
-${color1}Uptime:$color0 $uptime
-${color1}Frequency:$color0 ${freq}MHz or$color0 ${freq_g}GHz
-${color1}CPU Usage:$color0 $cpu% ${cpubar 4}
-${color1}RAM Usage:$color0 $mem/$memmax - $memperc% ${membar 4}
-${color1}Swap Usage:$color0 $swap/$swapmax - $swapperc% ${swapbar 4}
-${color1}Processes:$color0 $processes  ${color1}Running:$color0 $running_processes
-$hr
+${color}$hr
+${color1}System Performance
+${color2}  Uptime:$color0 $uptime
+${color2}  Frequency:$color0 ${freq}MHz or$color0 ${freq_g}GHz
+${color2}  CPU Usage:$color0 $cpu% ${cpubar 4}
+${color2}  RAM Usage:$color0 $mem/$memmax - $memperc% ${membar 4}
+${color2}  Swap Usage:$color0 $swap/$swapmax - $swapperc% ${swapbar 4}
+${color2}  Processes:$color0 $processes  ${color1}Running:$color0 $running_processes
+${color}$hr
 #${color1}Name               PID     CPU%   MEM%
 #${color2} ${top name 1} ${color0}${top pid 1} ${top cpu 1} ${top mem 1}
 #${color2} ${top name 2} ${color0}${top pid 2} ${top cpu 2} ${top mem 2}
@@ -98,7 +105,7 @@ $hr
 #$hr
 ${color1}File systems:
  / $color0${fs_used /}/${fs_size /} ${fs_bar 6 /}
-$hr
+${color}$hr
 ${color1}Shortcut
 ${color2} connman-ui     :$color0 win + i
 ${color2} PCMan FM       :$color0 win + f
@@ -107,5 +114,5 @@ ${color2} waterfox       :$color0 win + w
 ${color2} onlyoffice     :$color0 win + o
 ${color2} mgba           :$color0 win + g
 ${color2} emacs          :$color0 win + e
-$hr
+${color}$hr
 ]]

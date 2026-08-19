@@ -5,7 +5,7 @@ picom -b &
 nitrogen --restore &
 
 # set lemonbar
-#/home/tutu/.config/selfScript/statusBar.sh &
+/home/tutu/.config/selfScript/statusBar.sh &
 
 # set conky
 conky -c ~/.config/conky/default.conkyrc --pause=1 &
