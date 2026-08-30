@@ -2,19 +2,20 @@
 picom -b &
 
 # set wallpaper
-nitrogen --restore &
+nitrogen --restore --force-setter=xwindows &
 
 # set lemonbar
-/home/tutu/.config/selfScript/statusBar.sh &
+/home/tutu/.config/selfScript/statusBar.sh wlp2s0 &
 
 # set conky
-conky -c ~/.config/conky/default.conkyrc --pause=1 &
+conky -c ~/.config/conky/clock.conkyrc --pause=1 &
+conky -c ~/.config/conky/sp.conkyrc --pause=1 &
 
 # set color temperature
-#sct 3333 &
+sct 3333 &
 
 # set audio
-#pipewire &
+pipewire &
 
 # set automount
-#udiskie &
+udiskie &

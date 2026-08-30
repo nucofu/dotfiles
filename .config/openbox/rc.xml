@@ -348,9 +348,9 @@
         <command>pcmanfm</command>
       </action>
     </keybind>
-    <keybind key="W-w">
+    <keybind key="W-x">
       <action name="Execute">
-        <command>waterfox</command>
+        <command>firefox</command>
       </action>
     </keybind>
     <keybind key="W-e">
@@ -874,5 +874,22 @@
 
   # end of the example
 -->
+
+  <application class="conkyClock">
+    <desktop>1</desktop>
+    <below>yes</below>
+    <skip_taskbar>yes</skip_taskbar>
+    <skip_pager>yes</skip_pager>
+    <decor>no</decor>
+  </application>
+
+  <application class="conkySp">
+    <desktop>4</desktop>
+    <below>yes</below>
+    <skip_taskbar>yes</skip_taskbar>
+    <skip_pager>yes</skip_pager>
+    <decor>no</decor>
+  </application>
+
   </applications>
 </openbox_config>

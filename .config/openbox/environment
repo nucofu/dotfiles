@@ -1,1 +1,1 @@
-#export PATH="$HOME/Documents/Manual_App/portable:$PATH"
+export PATH="$HOME/Documents/Manual_App/portable:$PATH"

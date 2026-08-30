@@ -1,0 +1,55 @@
+-- This Configuration Made By Nucofu
+
+conky.config = {
+
+-- === Windows Section ===
+
+    own_window = true,
+    own_window_class = 'conkyClock',
+    own_window_transparent = true,
+    own_window_type = 'desktop',
+    own_window_hints = 'undecorated,below,skip_taskbar,skip_pager',
+
+    minimum_height = 200,
+    minimum_width = 200,
+    gap_y = 128,
+    
+    alignment = 'top_middle',
+    update_interval = 1.0,
+
+-- === Font Section ===
+
+    font = 'Iosevka Nerd Font:style=bold:size=10',
+
+    use_xft = true,
+    uppercase = false,
+    use_spacer = 'none',
+
+-- === Color Section ===
+
+    default_color = 'white',
+
+-- === False ===
+
+    draw_outline = false,
+    draw_shades = false,
+    draw_borders = false,
+
+-- === Buffers ===
+
+    double_buffer = true,
+    no_buffers = true,
+
+-- === Others ===
+
+    cpu_avg_samples = 2,
+    net_avg_samples = 2,
+
+}
+
+-- === Variables: https://conky.cc/variables ===
+
+conky.text = [[
+${alignc}${font Iosevka Nerd Font:style=bold:size=64}${time %H:%M}${font}
+${alignc}${font Iosevka Nerd Font:style=bold:size=15}${time %A, %d %B %Y}${font}
+]]

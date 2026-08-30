@@ -1,0 +1,85 @@
+-- This Configuration Made By Nucofu
+
+conky.config = {
+
+-- === Windows Section ===
+
+    own_window = true,
+    own_window_class = 'conkySp',
+    own_window_transparent = true,
+    own_window_type = 'desktop',
+    own_window_hints = 'undecorated,below,skip_taskbar,skip_pager',
+
+    minimum_height = 200,
+    minimum_width = 200,
+    maximum_width == 400,
+    gap_x = 20,
+    gap_y = 25,
+    
+    alignment = 'top_left',
+    update_interval = 1.0,
+
+-- === Font Section ===
+
+    font = 'Iosevka Nerd Font:style=bold:size=10',
+
+    use_xft = true,
+    uppercase = false,
+    use_spacer = 'none',
+
+-- === Color Section ===
+
+    default_color = '#cccccc',
+    color0 = 'white',
+
+    color1 = "#5ab8b0",
+    color2 = "#3ea49b",
+
+    color3 = "#f2ae4d",
+    color4 = "#ef8a2b",
+
+    color5 = "#d39bd4",
+    color6 = "#8b5aaf",
+
+-- === False ===
+
+    draw_outline = false,
+    draw_shades = false,
+    draw_borders = false,
+
+-- === Buffers ===
+
+    double_buffer = true,
+    no_buffers = true,
+
+-- === Others ===
+
+    cpu_avg_samples = 2,
+    net_avg_samples = 2,
+
+}
+
+-- === Variables: https://conky.cc/variables ===
+
+conky.text = [[
+${color3}| ${color0}Uptime $color0 ${alignr}$uptime
+  ${color}$hr
+  ${color}${cpugraph 75,255 8b5aaf d39bd4 -t}
+${color3}| ${color0}CPU ${alignr}${color0}${freq_g} GHz
+  ${color}$hr
+${color1}| ${color0}RAM $color0 ${alignr}$mem / $memmax
+${color5}| ${color0}Swap $color0 ${alignr}$swap / $swapmax
+  ${color}$hr
+  ${color4}${fs_bar /}
+${color1}| ${color0}Disk Used ${alignr}$color0${fs_used /}
+${color5}| ${color0}Total ${alignr}$color0${fs_size /}
+  ${color}$hr
+  ${color0}connman-ui     ${alignr}$color0 win + i
+  ${color0}PCMan FM       ${alignr}$color0 win + f
+  ${color0}st             ${alignr}$color0 win + t
+  ${color0}firefox        ${alignr}$color0 win + x
+  ${color0}onlyoffice     ${alignr}$color0 win + o
+  ${color0}mgba           ${alignr}$color0 win + g
+  ${color0}emacs          ${alignr}$color0 win + e
+  ${color}$hr
+]]
