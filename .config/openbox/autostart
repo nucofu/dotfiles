@@ -19,3 +19,6 @@ pipewire &
 
 # set automount
 udiskie &
+
+# screenlock
+xss-lock -- slock &

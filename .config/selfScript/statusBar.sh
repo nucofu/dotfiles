@@ -134,14 +134,14 @@ wifi() {
         out_i="%{A:cmst > /dev/null 2>&1 &:}%{F$primary}$iface%{F-} down%{A}"
         return
     else
-        if [ "$connSSID" != " " ]; then                
+        if [ ! -z "$connSSID" ]; then
             # strength with dbm
             strength="$(iw dev $iface link | awk '/signal/{dbm=$2}END{if (dbm != "") {print int(dbm)}}')"
             [ -z "$strength" ] && strength=0
                         
             # Strength Color Indicator
             if [ $strength -gt -40 ]; then
-                out_i="%{A:cmst > /dev/null 2>&1 &:}%{F$primary}$iface [%{F-}%{F$green_color$connSSID%{F-}%{F$primary}]%{F-} ${strength} dbm%{A}"
+                out_i="%{A:cmst > /dev/null 2>&1 &:}%{F$primary}$iface [%{F-}%{F$green_color}$connSSID%{F-}%{F$primary}]%{F-} ${strength} dbm%{A}"
             elif [ $strength -lt -80 ]; then
                 out_i="%{A:cmst > /dev/null 2>&1 &:}%{F$primary}$iface [%{F-}%{F$red_color}$connSSID%{F-}%{F$primary}]%{F-} ${strength} dbm%{A}"
             else
@@ -173,15 +173,15 @@ traffic_bytes() {
 
     # auto convert Kb to Mb
     if [ "$rx_diff" -gt 1024 ]; then
-        rx_out="$((rx_diff/1024))Mb"
+        rx_out="$((rx_diff/1024))mb"
     else
-        rx_out="${rx_diff}Kb"
+        rx_out="${rx_diff}kb"
     fi
 
     if [ "$tx_diff" -gt 1024 ]; then
-        tx_out="$((tx_diff/1024))Mb"
+        tx_out="$((tx_diff/1024))mb"
     else
-        tx_out="${tx_diff}Kb"
+        tx_out="${tx_diff}kb"
     fi
 
     # output variable
