@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # required dependencies
-# echo, awk, date, cat, sensors, brightnessctl, amixer, wmctrl, ls, iw, sleep, lemonbar
+# echo, awk, date, cat, sensors, brightnessctl, alsa-utils, wmctrl, ls, iw, sleep, lemonbar
 
 primary="#19bcff"
 background_color="#99000000"
@@ -58,11 +58,19 @@ temp() {
 
     # Temp Threshold Color Indicator & output variable
     if [ $temp -gt 55 ]; then
-        out_d="%{F$red_color}Temp%{F-} $temp"
+        if ! [ -e "${XDG_RUNTIME_DIR:-/tmp}/temp_cpu_high" ]; then
+            notify-send -u normal -i battery-good "Adapter Terhubung"
+            : > "${XDG_RUNTIME_DIR:-/tmp}/temp_cpu_high";
+        fi
+        
+        out_d="%{F$red_color}Temp%{F-} $temp"        
     else
+        if [ -e "${XDG_RUNTIME_DIR:-/tmp}/temp_cpu_high" ]; then
+            rm -f "${XDG_RUNTIME_DIR:-/tmp}/temp_cpu_high";
+        fi
+
         out_d="%{F$primary}Temp%{F-} $temp"
     fi
-    
 }
 
 backlight() {

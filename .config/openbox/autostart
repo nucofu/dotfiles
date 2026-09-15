@@ -5,7 +5,10 @@ picom -b &
 nitrogen --restore --force-setter=xwindows &
 
 # set lemonbar
-/home/tutu/.config/selfScript/statusBar.sh wlp2s0 &
+$HOME/.config/selfScript/statusBar.sh wlp2s0 &
+
+# battery notification
+$HOME/.config/selfScript/battery.sh &
 
 # set conky
 conky -c ~/.config/conky/clock.conkyrc --pause=1 &
@@ -21,4 +24,4 @@ pipewire &
 udiskie &
 
 # screenlock
-xss-lock -- slock &
+#xss-lock -- slock &

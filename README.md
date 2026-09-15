@@ -8,23 +8,22 @@ current
 - openbox **updated**
 - picom
 - sakura
-- dunst
+- dunst **updated**
 - obmenu-generator
 - lemonbar **updated**
 - qt5ct, qt6ct
+- battery notification
+- colorpick
 
 extra
 - themes
 - icons
 
 next
-- dunst **update**
-- i3lock
-
-aborted
-- battery management
-- screen mirror (different repo)
+- idk
 
 catetan
 - *kahade adjust path ka desktop dina obmenu-generator lamun ek ganti user
-- *update, di script statusbar wajib nambahkeun argumen iface wireless devices laptop ente
+- *update, di script statusbar wajib namahkeun argumen iface wireless devices, lamun hnt moal jalan
+- *list package saya tulis dina packages.txt
+- *aya beberapa opsi nu dirubah jadi comment, lamun ek dihapus kahade we adjust dei config nu lain-na
